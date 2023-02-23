@@ -19,7 +19,7 @@
     // send email
     mail("burbano@fulton-school.org","My subject",$msg);
 
-
+    echo 'message sent';
 //removing file
     // if ($data->action == "remove"){
     //     $a = 1;
