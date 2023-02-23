@@ -27,7 +27,7 @@
 
   <br>Comments:<br> <input
   type="text"
-  id = "Comment"
+  id = "rComment"
   placeholder="John Doe">
 
   <br><input type="button" id="submit" value="Submit">
@@ -39,8 +39,8 @@
 
   function recordOrder(){
     let data = {};
-    data['name'] = rname.value;
-    data['Email'] = rEmail.value;
+    data['name'] = name.value;
+    data['Email'] = Email.value;
     data['Comment'] = rComment.value;
 
     xR = new XMLHttpRequest();
