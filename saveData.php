@@ -17,7 +17,7 @@
     $msg = wordwrap($msg,70);
 
     // send email
-    mail("burbano@fulton-school.org","My subject",$msg);
+    mail("cheezypizzagamer@gmail.com","My subject",$msg);
 
     echo 'message sent';
 //removing file
