@@ -10,7 +10,14 @@
     fwrite($file, json_encode($data)."\n");
     fclose($file);
 
+    // the message
+    $msg = $data/*"First line of text\nSecond line of text"*/;
 
+    // use wordwrap() if lines are longer than 70 characters
+    $msg = wordwrap($msg,70);
+
+    // send email
+    mail("burbano@fulton-school.org","My subject",$msg);
 
 
 //removing file
