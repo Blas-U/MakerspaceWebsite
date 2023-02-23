@@ -6,7 +6,9 @@
 
     echo json_encode($data);
 
-    
+    $file = fopen('mOrder.json', 'a');
+    fwrite($file, json_encode($_GET)."\n");
+    fclose($file);
 
 
 
