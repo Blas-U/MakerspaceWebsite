@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+    </body>
+<script>
+    fetch('mOrder.json')
+    .then(function(response){
+        return response.body;
+    })
+    .then(function(body) {
+        console.log(body)
+    })
+    xR = new XMLHttpRequest();
+    xR.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log("Server:", this.responseText);
+    
+      }
+
+    }
+    xR.open("POST", "saveData.php", true);
+    xR.send(JSON.stringify(data));
+</script>
+
+</html>
