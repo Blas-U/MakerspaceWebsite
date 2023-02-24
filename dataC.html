@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <body>
-
+        <div id = "p"></div>
     </body>
 <script>
     let data = {};
-    
+
     fetch('mOrder.json')
     .then(function(response){
         return response.body;
@@ -13,6 +13,10 @@
     .then(function(body) {
         console.log(body)
     })
+    
+    x = document.getElementById("p");
+    x.innerHTML = body;
+    
     xR = new XMLHttpRequest();
     xR.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
