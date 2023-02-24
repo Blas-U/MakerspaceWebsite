@@ -4,6 +4,8 @@
 
     </body>
 <script>
+    let data = {};
+    
     fetch('mOrder.json')
     .then(function(response){
         return response.body;
@@ -19,7 +21,7 @@
       }
 
     }
-    xR.open("POST", "saveData.php", true);
+    xR.open("POST", "mOrder.json", true);
     xR.send(JSON.stringify(data));
 </script>
 
