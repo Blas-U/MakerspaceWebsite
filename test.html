@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div
+        id = "emtpydiv"></div>
+
+
+    <h1 style="color:blue;">A Blue Heading</h1>
+
+
+    <!-- <p id="demo">Click</p> -->
+
+  <br>  name:<br> <input
+    type="text"
+    id = "rname"
+    placeholder="John Doe">
+
+  <br>Email:<br> <input
+    type="text"
+    id = "Email"
+    placeholder="John Doe">
+
+  <br>Comments:<br> <input
+  type="text"
+  id = "rComment"
+  placeholder="John Doe">
+
+  <br><input type="button" id="submit" value="Submit">
+  <!-- <br><button type="button" onclick="alert(T)">Purchase</button> -->
+  
+<script>
+    
+    // document.getElementById("emtpydiv").innerHTML = "Hello";
+
+    // x = document.getElementById("submit");
+    //     x.addEventListener('click', function(){
+    //         this.innerHTML = "1";
+    //     })
+    document.getElementById("submit").addEventListener("click", myFunction);
+
+    function myFunction() {
+    // document.getElementById("emtpydiv").innerHTML = document.getElementById("rname").value;
+    document.getElementById("emtpydiv").innerHTML = `Hello ${rname.value}`;
+    }
+
+    rname.addEventListener("keyup", myFunction)
+
+
+
+
+
+    //collect infofrom webpage
+    // info = {};
+    // info["name"] = document.getElementById('name').value;
+    //     ('name').value;
+    // console.log(info);
+
+  
+
+
+  // T = "100$"
+// document.getElementById("demo").addEventListener("click", myFunction);
+
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = "Potato";
+// }     
+</script>
+</body>
+</html>

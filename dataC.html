@@ -4,29 +4,39 @@
         <div id = "p"></div>
     </body>
 <script>
-    let data = {};
+    // let data = {};
 
+    // fetch('mOrder.json')
+    // .then(function(response){
+    //     return response.body;
+    // })
+    // .then(function(body) {
+    //     console.log(body)
+    // })
+    // .then
     fetch('mOrder.json')
-    .then(function(response){
-        return response.body;
-    })
-    .then(function(body) {
-        console.log(body)
-    })
-    
-    x = document.getElementById("p");
-    x.innerHTML = 'mOrder.json';
-    
-    xR = new XMLHttpRequest();
-    xR.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        console.log("Server:", this.responseText);
-    
-      }
+    .then(x => x.text())
+    .then(y => myDisplay(y));
 
+    function myDisplay(y){
+        document.getElementById("p").innerHTML = y;
+        lines = y.split("\n");
+        ocnsole.log(lines);
     }
-    xR.open("POST", "mOrder.json", true);
-    xR.send(JSON.stringify(data));
+
+    // x = document.getElementById("p");
+    // x.innerHTML = ;
+    
+    // xR = new XMLHttpRequest();
+    // xR.onreadystatechange = function() {
+    //   if (this.readyState == 4 && this.status == 200) {
+    //     console.log("Server:", this.responseText);
+    
+    //   }
+
+    // }
+    // xR.open("POST", "mOrder.json", true);
+    // xR.send(JSON.stringify(data));
 </script>
 
 </html>
